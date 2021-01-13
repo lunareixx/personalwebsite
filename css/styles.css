@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+/** 1 rem = 16 px**/
+
+:root { 
+  font-size: 1.125rem; 
+  --socialhnw: 20px;
+  --nssize: 25px;
+  --h2fsize: 35px;
+}
+@media (min-width: 600px) { 
+  :root { 
+    font-size: 1.5rem;
+    --socialhnw: 26px;
+    --nssize: 30px;
+    --h2fsize: 40px;
+  } 
+}
+@media (min-width: 900px) { 
+  :root { 
+    font-size: 1.75rem; 
+    --socialhnw: 30px;
+    --nssize: 35px;
+    --h2fsize: 45px;
+  } 
+}
+@media (min-width: 1200px) { 
+  :root { 
+    font-size: 2rem; 
+    --socialhnw: 34px;
+    --nssize: 40px;
+    --h2fsize: 50px;
+  } 
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: #FFF;
+}
+h2 {
+  font-family: 'Barlow Semi Condensed', sans-serif; 
+  color: #353535;
+  font-size: var(--h2fsize);
+  letter-spacing: 0.15em;
+}
+a {
+  text-decoration: none;
+}
+.nav {
+  color: #353535;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold; 
+  text-decoration: none;
+  text-align: center;
+  
+  display: inline-block;
+  padding: 0 0 0 0;
+  position: relative;
+}
+.nav:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #353535;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.homepage {
+  font-family: 'Barlow Semi Condensed', sans-serif; 
+  color: #353535; 
+  font-weight: bold;
+  font-size: var(--nssize);
+  letter-spacing: 0.1em;
+}
+.social {
+ height: var(--socialhnw);
+ width: var(--socialhnw);
+ font-size: var(--socialhnw);
+ font-weight: bold;
+ font-family: 'Montserrat', sans-serif;
+ display: inline-block;
+ position: relative;
+ padding: 0 0 0 0;
+}
+.messages {
+  overflow: auto;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 1rem .9rem;
+}
+.bubble {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 0 .125rem 0;
+  padding: .5rem .85rem;
+  line-height: 1.25rem;
+  border-radius: 1.25rem;
+  transform-origin: 0 100%;
+  vertical-align: middle;
+  transition: border-radius .25s ease-out .075s;
+}
+.bubble.left.cornered {
+  border-bottom-left-radius: 0;
+}
+.bubble.left {
+  background: rgba(206,206,206,0.50);
+}
+.bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -.5rem;
+  width: .5rem;
+  height: .5rem;
+  background-image: url(../img/corner.svg);
+  background-size: .5rem .5rem;
+  background-position: .5rem 0;
+  background-repeat: no-repeat;
+  transition: background-position .15s ease-in;
+}
+.bubble.cornered:after {
+  background-position: 0 0;
+}
+.bubble span {
+  display: block;
+}
+.bubble span.message {
+  opacity: 0;
+}
+.bubble a {
+  color: #0076FF;
+}
+.bubble .loading {
+  position: absolute;
+  width: 2.25rem;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+.bubble .loading b {
+  display: inline-block;
+  color: rgba(0,0,0,.5);
+}
