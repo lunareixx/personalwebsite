@@ -19,7 +19,7 @@ window.onload = function() {
   var messages = [
     '<h2 style="color: #353535;">404 Not Found</h2>',
     'Ya, seperti yang tertera diatas, saya belum membuat blog — hehehe.',
-    'Alasan mengapa blognya belum ada. Karena design website ini tidak didesign untuk blog. Jika kalian sudah membaca halaman \'About Me\', kalian akan tahu bahwa website ini juga tidak menggunakan Wordpress Plugin, jadi untuk mengedit isi konten seperti blog sangat tidak efisien.', 
+    'Alasan mengapa blognya belum ada. Karena website ini tidak didesign untuk blog. Jika kalian sudah membaca halaman \'About Me\', kalian akan tahu bahwa website ini juga tidak menggunakan CMS (Content Management System), jadi untuk mengedit isi konten seperti blog sangat tidak efisien.', 
     'Mungkin diwaktu yang akan mendatang saya akan mencoba untuk membuat Blog seperti yang saya inginkan. Tapi sebelum itu mungkin saya akan belajar Bahasa Indonesia terlebih dahulu, karena susunan kalimat Bahasa Indonesia saya masih buruk — wkwkwk.',
     '<a href="menu.html" style="color: #000000;" class="nav">Back To Menu</a>'
   ]
